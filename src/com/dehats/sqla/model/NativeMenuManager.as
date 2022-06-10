@@ -1,6 +1,6 @@
 package com.dehats.sqla.model
 {
-	import com.dehats.air.DeclarativeMenu;
+	import flash.display.NativeMenu;
 	import com.dehats.sqla.model.presentation.MainPM;
 	
 	import flash.desktop.NativeApplication;
@@ -20,7 +20,7 @@ package com.dehats.sqla.model
 		}
 
 		
-		public function createMenu():DeclarativeMenu
+		public function createMenu():NativeMenu
 		{
 			
 			var menuDefinition:XML = 
@@ -51,7 +51,7 @@ package com.dehats.sqla.model
 			        
 			    </root>;
 
-			var root:DeclarativeMenu = new DeclarativeMenu(menuDefinition); 
+			var root:NativeMenu = new NativeMenu(menuDefinition); 
 
 			root.addEventListener(Event.SELECT, onMenuSelect);
 			

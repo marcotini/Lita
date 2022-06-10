@@ -1,7 +1,7 @@
 package com.dehats.sqla.model
 {
 	import com.dehats.air.sqlite.SQLiteDBHelper;
-	import com.dehats.air.sqlite.SQLiteErrorEvent;
+	//import com.dehats.air.sqlite.SQLiteErrorEvent;
 	import com.dehats.air.sqlite.SimpleEncryptionKeyGenerator;
 	import com.dehats.sqla.events.EncryptionErrorEvent;
 	
@@ -37,14 +37,14 @@ package com.dehats.sqla.model
 		public function MainModel()
 		{
 			db = new SQLiteDBHelper();
-			db.addEventListener(SQLiteErrorEvent.EVENT_ERROR, onSQliteError);
+			//db.addEventListener(SQLiteErrorEvent.EVENT_ERROR, onSQliteError);
 		}
-		
+		/*
 		private function onSQliteError(pEvt:SQLiteErrorEvent):void
 		{
 			dispatchEvent(pEvt);
 		}
-				
+		*/	
 		
 		public function openDBFile(pFile:File, isNew:Boolean=false, pPassword:String=""):Boolean
 		{

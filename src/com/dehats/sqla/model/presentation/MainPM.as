@@ -3,7 +3,7 @@ package com.dehats.sqla.model.presentation
 	import air.update.ApplicationUpdaterUI;
 	import air.update.events.UpdateEvent;
 	
-	import com.dehats.air.sqlite.SQLiteErrorEvent;
+	//import com.dehats.air.sqlite.SQLiteErrorEvent;
 	import com.dehats.sqla.events.EncryptionErrorEvent;
 	import com.dehats.sqla.model.FileManager;
 	import com.dehats.sqla.model.MainModel;
@@ -67,7 +67,7 @@ package com.dehats.sqla.model.presentation
 		{
 			
 			mainModel = new MainModel();
-			mainModel.addEventListener( SQLiteErrorEvent.EVENT_ERROR, onSQLiteError);
+			//mainModel.addEventListener( SQLiteErrorEvent.EVENT_ERROR, onSQLiteError);
 			mainModel.addEventListener( EncryptionErrorEvent.EVENT_ENCRYPTION_ERROR, onEncryptionError);
 			
 			fileManager = new FileManager();
@@ -531,7 +531,7 @@ package com.dehats.sqla.model.presentation
 			navigateToURL(new URLRequest(HELP_URL));
 		}
 		
-
+/*
 		private function onSQLiteError(pEvt:SQLiteErrorEvent):void
 		{
 			var msg:String = pEvt.error.message;
@@ -541,7 +541,7 @@ package com.dehats.sqla.model.presentation
 			if(pEvt.statement!="") msg+="\n\n"+"Statement"+":\n"+pEvt.statement;
 			Alert.show(msg+notes, "Error");
 		}
-
+*/
 		private function onEncryptionError(pEvt:EncryptionErrorEvent):void
 		{
 			var msg:String = pEvt.error.message;
